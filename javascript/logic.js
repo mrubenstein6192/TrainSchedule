@@ -38,11 +38,11 @@ database.ref().on("child_added", function(childSnapshot) {
   var firstTime = trainData.firstTrainTime;
   console.log("First time is" + firstTime);
  
-  var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
+  var firstTimeConverted = moment(firstTime, "H:mm").subtract(1, "years");
     console.log(firstTimeConverted);
 
   var currentTime = moment();
-  console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+  console.log("CURRENT TIME: " + moment(currentTime).format("H:mm"));
   
   var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
     console.log("DIFFERENCE IN TIME: " + diffTime);
@@ -57,7 +57,7 @@ database.ref().on("child_added", function(childSnapshot) {
 
     // Next Train
     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-    console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+    console.log("ARRIVAL TIME: " + moment(nextTrain).format("H:mm"));
 
 
   //create table row
@@ -69,7 +69,7 @@ database.ref().on("child_added", function(childSnapshot) {
   var $tdFrequency = $("<td>").text(trainData.frequency);
 
   //finish later
-  var $tdArrival = $("<td>").text((nextTrain).format("hh:mm"));
+  var $tdArrival = $("<td>").text((nextTrain).format("H:mm"));
 
   //finish minutes away later
   var $tdMinutesAway = $("<td>").text(tMinutesTillTrain);
