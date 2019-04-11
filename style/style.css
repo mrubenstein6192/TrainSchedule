@@ -1,0 +1,16 @@
+body{
+  background-color: rgba(148, 145, 145, 0.979);
+}
+
+.jumbotron {
+  background-image: url("../images/train.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: inherit;
+}
+
+h1 {
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
